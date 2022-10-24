@@ -1,0 +1,28 @@
+#----------------------------------------------------------------------
+# USAGE :
+# COPY THIS FILE TO ".env" AND FILL IN THE VALUES
+#----------------------------------------------------------------------
+
+# -----  ABP -----
+
+# LoRaWAN NwkSKey, network session key
+LW_NWKSKEY="00000000000000000000000000000000"
+
+# LoRaWAN AppSKey, application session key
+LW_APPSKEY="00000000000000000000000000000000"
+
+# LoRaWAN end-device address (DevAddr)
+# This has to be unique for every node
+LW_DEVADDR="00000000"
+
+# -----  OTAA -----
+
+# For TTN issued EUIs the last bytes should be 0x00, 0x00, 0x00.
+LW_APPEUI= "0000000000000000"
+
+# You do not need to set this field, if unset it will be generated automatically based on the device macaddr
+LW_DEVEUI="0000000000000000"
+
+# In practice, a key taken from ttnctl can be copied as-is.
+# The key shown here is the semtech default key.
+LW_APPKEY="00000000000000000000000000000000"

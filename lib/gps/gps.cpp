@@ -19,6 +19,9 @@
 
 */
 
+#include <Arduino.h>
+#include "gps.h"
+#include "configuration.h"
 #include <TinyGPS++.h>
 
 uint32_t LatitudeBinary;
@@ -59,7 +62,7 @@ void gps_setup() {
     _serial_gps.begin(GPS_BAUDRATE, SERIAL_8N1, GPS_RX_PIN, GPS_TX_PIN);
 }
 
-static void gps_loop() {
+void gps_loop() {
     while (_serial_gps.available()) {
         _gps.encode(_serial_gps.read());
     }

@@ -33,7 +33,7 @@ void ttn_register(void (*callback)(uint8_t message));
 // -----------------------------------------------------------------------------
 
 #define APP_NAME                "TTN MAP-TRACK"
-#define APP_VERSION             "1.2.3"
+#define APP_VERSION             "1.2.4"
 
 // -----------------------------------------------------------------------------
 // Configuration
@@ -130,6 +130,8 @@ void ttn_register(void (*callback)(uint8_t message));
 #define GPS_RX_PIN      34
 #define GPS_TX_PIN      12
 #endif
+
+// #define GPS_FACTORY_RESET
 
 // -----------------------------------------------------------------------------
 // LoRa SPI
