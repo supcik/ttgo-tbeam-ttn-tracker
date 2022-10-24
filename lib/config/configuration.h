@@ -33,7 +33,7 @@ void ttn_register(void (*callback)(uint8_t message));
 // -----------------------------------------------------------------------------
 
 #define APP_NAME "TTN MAP-TRACK"
-#define APP_VERSION "1.2.4"
+#define APP_VERSION "1.2.4 / JS"
 
 // -----------------------------------------------------------------------------
 // Configuration
@@ -55,7 +55,8 @@ void ttn_register(void (*callback)(uint8_t message));
 
 // Uncomment to enable discarding network settings by long pressing second button
 // Used for resetting frame counter, required to be done for migrating TTN v2 -> v3 (or switching
-// applications on TTN) #define PREFS_DISCARD
+// applications on TTN)
+// #define PREFS_DISCARD
 
 // If you are having difficulty sending messages to TTN after the first successful send,
 // uncomment the next option and experiment with values (~ 1 - 5)
@@ -136,6 +137,8 @@ void ttn_register(void (*callback)(uint8_t message));
 #define GPS_TX_PIN 12
 #endif
 
+// uncomment to do a factory reset of the GPS module. This is sometimes needed if the GPS
+// module was used in another context (e.g. Meshtastic).
 // #define GPS_FACTORY_RESET
 
 // -----------------------------------------------------------------------------
