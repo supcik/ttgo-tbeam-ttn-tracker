@@ -28,11 +28,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "OLEDDisplay.h"
 #include "SSD1306Wire.h"
 #include "configuration.h"
+#include "context.h"
 #include "fonts.h"
 #include "gps.h"
 #include "images.h"
 #include "ttn.h"
-#include "context.h"
 
 #define SCREEN_HEADER_HEIGHT 14
 
