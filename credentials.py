@@ -1,6 +1,7 @@
 Import("env")
 
 import os
+
 try:
     from dotenv import load_dotenv
 except ImportError:
@@ -8,6 +9,7 @@ except ImportError:
     from dotenv import load_dotenv
 
 load_dotenv()
+
 
 def append_list(defines, env_var, key, expected_len, reverse=False):
     hex_string = os.getenv(env_var, None)
@@ -17,12 +19,13 @@ def append_list(defines, env_var, key, expected_len, reverse=False):
     l = list(bytes.fromhex(hex_string))
     if len(l) != expected_len:
         raise ValueError("Invalid length for {0}".format(env_var))
-    
+
     if reverse:
         l.reverse()
 
     v = ", ".join(["0x{0:X}".format(i) for i in l])
     defines.append((key, v))
+
 
 def append_hex(defines, env_var, key):
     hex_string = os.getenv(env_var, None)
@@ -30,6 +33,7 @@ def append_hex(defines, env_var, key):
         return
     v = "0x{0:X}".format(int(hex_string, 16))
     defines.append((key, v))
+
 
 cpp_defines = list()
 

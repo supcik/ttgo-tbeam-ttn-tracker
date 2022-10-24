@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 
-void gps_time(char * buffer, uint8_t size);
+void gps_time(char* buffer, uint8_t size);
 float gps_latitude();
 float gps_longitude();
 float gps_altitude();
