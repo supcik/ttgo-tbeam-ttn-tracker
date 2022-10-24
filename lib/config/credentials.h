@@ -1,6 +1,7 @@
 /*
 
 Credentials file
+The effective credentials come from the ".env" file.
 
 */
 
